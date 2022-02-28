@@ -41,4 +41,6 @@ const compareVersion = (version1, version2) => {
 
 // If two chunks are not equal, return 1 or -1.
 // If we're here, the versions are equal. Return 0.
+
+//Time O(n)
 }
