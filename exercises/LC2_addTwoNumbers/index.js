@@ -13,6 +13,18 @@ class ListNode {
   }
 }
 
-function addTwoNumbers(l1, l2) {}
+function addTwoNumbers(l1, l2) {
+
+  
+  let carry = 0
+
+
+  let carryOver = sum/10
+
+  while (l1 || l2) {
+    let sum = l1.val + l2.val + carry
+  }
+
+}
 
 module.exports = addTwoNumbers;
