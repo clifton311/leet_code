@@ -3,34 +3,72 @@
 // --- Example
 // lengthOfLongestSubstring("abcabcbb") --> 3 since length of "abc"
 // lengthOfLongestSubstring("bbbbb") --> 1 since length of "b"
-
-function lengthOfLongestSubstring(s) {
-
-    if (s.length === 1) return s;
-    let start = 0
-    let maxLength = 1
+var lengthOfLongestSubstring = function(s) {
     
-    for (let i = 0; i < s.length;i++) {
-      let odd = expandAroundMiddle(i -1,i+1)
-      let even = expandAroundMiddle(i,i+1)
-        
-    }
+  let start = 0
+  let end = 0
+  let longest = 0
+  
+  let set = new Set()
 
-     function expandAroundMiddle  (left, right)  {
-      while (left >= 0 && right < s.length && s.charAt(left) === s.charAt(right)) {
-            const currentLength = right-left +1
-            if (currentLength > maxLength) {
-                maxLength = currentLength
-                start = left
-            }
-          left--
-          right++
-        }
-        
-    }
+  while (start < s.length) {
+      if (!set.has(s[start])) {
+          set.add(s[start])
+          longest = Math.max(longest, set.size)
+          start++
+      } else {
+          set.delete(s[end])
+          end++
+      }
+  }
+  
+return longest
+  
+};
+
+
+// var lengthOfLongestSubstring = function(s) {
+//   if(s.length <= 1) return s.length;
+  
+//   const seen = new Map();
+//   let left = 0, longest = 0;
+  
+//   for( let right = 0; right < s.length; right++){
+//       const curr = s[right];
+//       const pre = seen.get(curr);
+//       if(pre >= left){
+//           left = pre+1;
+//       }
+//       seen.set(curr,right);
+//       longest = Math.max(longest, (right - left + 1));
+//   }
+//   return longest;
+// };
+
+
+
    
-    return s.slice(start, start + maxLength)
+// var lengthOfLongestSubstring = function (str) {
+//   const hash = {};
+//   let start = 0;
+//   let max = 0;
 
-}
+//   for (let i = 0; i < str.length; i++) {
+//     let rightChar = str[i];
+
+//     if (!(rightChar in hash)) hash[rightChar] = 0;
+//     hash[rightChar] += 1;
+
+//     while (hash[rightChar] > 1) {
+//       let leftChar = str[start];
+//       start += 1;
+
+//       if (leftChar in hash) hash[leftChar] -= 1;
+//       if (hash[leftChar] === 0) delete hash[leftChar];
+//     }
+//     max = Math.max(max, i - start + 1);
+//   }
+//   return max;
+// };
 
 module.exports = lengthOfLongestSubstring;

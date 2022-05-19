@@ -1,3 +1,6 @@
-function isAnagram(s, t) {}
+function isAnagram(s, t) {
+
+    
+}
 
 module.exports = isAnagram;
