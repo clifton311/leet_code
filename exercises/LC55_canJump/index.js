@@ -19,8 +19,6 @@ function JumpGame(nums) {
            //if goal equals 0, return true
            return goal === 0
        
-       
-
 
 }
 
