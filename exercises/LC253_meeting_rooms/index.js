@@ -31,8 +31,6 @@ var minMeetingRooms = function(intervals) {
     start.sort((a, b) => a-b)
     end.sort((a, b) => a-b)
     
-    
-    
     while (i < start.length) {
         if (start[i] < end[j]) {
             count++
