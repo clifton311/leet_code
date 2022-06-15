@@ -15,7 +15,7 @@ Return the global maximum.
 let currMax = 0
 let maxSub = nums[0]
 
-  for (let i = 0; i< nums.length; i++) {
+  for (let i = 0; i < nums.length; i++) {
     if (currMax < 0) {
       currMax = 0
     }

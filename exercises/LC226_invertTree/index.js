@@ -4,7 +4,7 @@ function invertTree(root) {
 
   let temp = root.left;
   root.left = root.right
-  root.left = tempd
+  root.left = temp
 
   invertTree(root.left)
   invertTree(root.right)

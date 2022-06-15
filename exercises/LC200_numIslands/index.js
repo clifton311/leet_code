@@ -9,7 +9,6 @@ function numIslands(grid) {
         }
     }
 
- 
     return numIslands
 }
 
