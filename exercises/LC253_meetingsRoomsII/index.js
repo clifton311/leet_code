@@ -15,9 +15,9 @@ var minMeetingRooms = function(intervals) {
     let start = [];
     let end = [];
     let res = 0;
-    let count = 0
-    let i = 0
-    let j = 0
+    let meetingRooms = 0
+
+  
     
     //looop through the intervals and push all the start times and end times
     for (let i = 0; i < intervals.length; i++) {
@@ -26,21 +26,25 @@ var minMeetingRooms = function(intervals) {
         end.push(interval[1])
     }
     
-    //sort the intervals by start date and end date
+    //sort the intervals by start date and end date (asc)
     start.sort((a, b) => a-b)
     end.sort((a, b) => a-b)
-    
+
+    //use two pointers to track times, if the start time is less than end time, meetingRooms++
+
+    let i = 0
+    let j = 0
     while (i < start.length) {
         if (start[i] < end[j]) {
-            count++
+            meetingRooms++;
             i++
         } else {
-            count--;
+            meetingRooms--;
             j++
         }
         
         //grab the maximum
-        res = Math.max(count,res)
+        res = Math.max(meetingRooms,res)
     }
     return res
 };

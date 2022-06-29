@@ -4,11 +4,8 @@
 // Return true if you can reach the last index, or false otherwise.
 
 function JumpGame(nums) {
-
-  
             // start at the end
            let goal = nums.length -1
-
            //loop backwards through array
 
            for (let i = nums.length-1; i >= 0; i--) {
@@ -16,7 +13,6 @@ function JumpGame(nums) {
                // check if the index + value is greater or equal to goal
 
                if (i + nums[i] >= goal) {
-                   
                    //reposition goal
                    goal = i
                }

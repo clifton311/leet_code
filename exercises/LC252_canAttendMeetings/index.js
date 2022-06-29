@@ -4,6 +4,11 @@
 // canAttendMeetings([[0, 30], [5, 10], [15, 20]]) --> false
 // canAttendMeetings([[7, 10], [2, 4]]) --> true
 
-const canAttendMeetings = intervals => {};
+const canAttendMeetings = intervals => {
+
+    const starts = [];
+    const ends = [];
+    
+};
 
 module.exports = canAttendMeetings;

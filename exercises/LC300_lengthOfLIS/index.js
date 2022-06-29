@@ -6,7 +6,11 @@ function lengthOfLIS(nums) {
     For example, [3,6,2,7] is a subsequence of the array [0,3,1,6,2,2,7].
     */
 
-    let dp = Array.fill(1)
+    let dp = Array.fill(nums.length).fill(1)
+
+    for (let i = 0; i < nums.length;i++) {
+        
+    }
   
 }
 
