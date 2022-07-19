@@ -23,4 +23,6 @@ function JumpGame(nums) {
 
 }
 
+
+
 module.exports = canJump;

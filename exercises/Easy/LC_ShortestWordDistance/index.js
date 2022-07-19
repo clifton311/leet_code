@@ -10,7 +10,7 @@
 
 var shortestDistance = function(arr, word1, word2) {
     
-    let index1 = -1
+  let index1 = -1
   let index2 = -1
   let result = Infinity
   

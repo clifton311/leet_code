@@ -17,8 +17,7 @@ var minMeetingRooms = function(intervals) {
     let res = 0;
     let meetingRooms = 0
 
-  
-    
+
     //looop through the intervals and push all the start times and end times
     for (let i = 0; i < intervals.length; i++) {
         let interval = intervals[i]

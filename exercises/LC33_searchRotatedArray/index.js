@@ -22,7 +22,6 @@ var search = function(nums, target) {
       if (nums[mid] === target) {
           return mid
       }
-      
       // determine which segment is sorted
        if (nums[left] <= nums[mid]) {
           if (nums[left] <= target && target < nums[mid]) {
@@ -30,7 +29,6 @@ var search = function(nums, target) {
           } else {
               left = mid +1
           }
-          
       } else {
           if (nums[mid] <= target && target <= nums[right]) {
               left = mid + 1

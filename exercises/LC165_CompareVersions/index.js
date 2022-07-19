@@ -24,7 +24,6 @@ const compareVersion = (version1, version2) => {
 
     //set variable 
     let maxLen = Math.max(v1.length, v2.length)
-
     // Iterate over the longest array and compare chunks one by one. 
     //If one of the arrays is over, virtually add as many zeros as needed to continue the comparison with the longer array.
     for (let i = 0; i < maxLen; i++) {
