@@ -7,7 +7,6 @@ function JumpGame(nums) {
             // start at the end
            let goal = nums.length -1
            //loop backwards through array
-
            for (let i = nums.length-1; i >= 0; i--) {
 
                // check if the index + value is greater or equal to goal
