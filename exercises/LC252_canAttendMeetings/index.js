@@ -6,8 +6,6 @@
 
 const canAttendMeetings = intervals => {
 
-    
-
     if(!intervals || intervals.length === 1) return true;
     
     //sort the intervals

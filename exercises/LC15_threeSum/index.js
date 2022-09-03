@@ -8,7 +8,6 @@
         // Finally, it's OK to sort, because we accept a quadratic runtime here,
         // and adding an O(logn) sort operation won't make that any worse
         nums.sort((a, b) => { return a - b})
-      
         // With a sorted array, let's initialize a result array, which we'll use to hold our triplets
         const result = []
       

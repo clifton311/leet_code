@@ -5,7 +5,6 @@ const validParenthesis = s => {
         "{": "}",
         "[": "]"
     }
-
     for (let i = 0; i < s.length; i++) {
       if (hashMap[s[i]] ) {
           stack.push(s[i])

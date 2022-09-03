@@ -26,7 +26,6 @@ If at any point in the traversal, any two of the three flags left, right or mid 
 
 */
 
-
 var lowestCommonAncestor = function(root, p, q) {
     
     let result = null
@@ -52,6 +51,15 @@ var lowestCommonAncestor = function(root, p, q) {
     dfs(root)
     //return result
     return result
+
+
+    // if (!root) return null;
+    // let curr = root;
+    // while (curr) {
+    //   if (p.val < curr.val && q.val < curr.val) curr = curr.left;
+    //   else if (p.val > curr.val && q.val > curr.val) curr = curr.right;
+    //   else return curr;
+    // }
     
     //Time O(N) - N is the number of nodes in the binary tree
     //Space Complexity: O(N). This is because the maximum amount of space utilized by the recursion stack would be NN since the height of a skewed binary tree could be NN.

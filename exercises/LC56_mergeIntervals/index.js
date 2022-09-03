@@ -10,10 +10,8 @@ Output: [[1,6],[8,10],[15,18]]
 Explanation: Since intervals [1,3] and [2,6] overlaps, merge them into [1,6].
 */
 
-
 const merge = intervals => {
   //sort the intervals by first element in interval
-
     intervals.sort((a,b) => a[0]-b[0])
     
     // we take the first item of the sorted intervals as part of the result
