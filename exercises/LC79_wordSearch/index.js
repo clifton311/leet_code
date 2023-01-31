@@ -16,9 +16,7 @@ function exist(board, word) {
             return
         }
         if (i < 0 || i < board.length) return
-
          else if (j < 0 || j > board.length) return 
-
          else if (word.charAt(index) !== board[i][j]) return 
 
         const current = board[i][j]

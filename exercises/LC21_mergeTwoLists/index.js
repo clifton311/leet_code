@@ -26,6 +26,7 @@ function mergeTwoLists(l1, l2) {
     }
 
     cur.next = l1 || l2;
+    
     return result.next;
 
 
